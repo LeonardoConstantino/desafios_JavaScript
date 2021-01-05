@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio antes depois</title>
+</head>
+<body>
+
+    <h1>Antes depois</h1>
+
+    <input type="button" value="Antecessor e Sucessor" onclick="clicar()">
+
+    <script>
+        function clicar(){
+
+            var numeroDigitado = Number(window.prompt('Digite um numero inteiro'))
+
+            window.alert(`Antes de ${numeroDigitado}, temos o numero ${numeroDigitado - 1}.
+Depois do ${numeroDigitado}, temos o numero ${numeroDigitado + 1} `)
+        }
+    </script>
+</body>
+</html>
