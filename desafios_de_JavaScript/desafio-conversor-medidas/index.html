@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio conversor medidas</title>
+</head>
+
+<body>
+    <h1>Conversor medidas</h1>
+
+    <input type="button" value="Converter" onclick="converter()">
+
+    <p id="res">Clique no botão acima.</p>
+
+    <script>
+
+        function converter() {
+
+            var medida = Number(window.prompt('Digite uma distancia em metros (m)'))
+
+            res.innerHTML = `
+            <h2>A distancia de ${medida} metros, corresponde a...</h2>
+
+            <p>
+                ${medida / 1000} quilômetros (Km)</br>
+                ${medida / 100} hectômetros (Hm)</br>
+                ${medida / 10} decâmetros (Dam)</br>
+                ${medida * 10} decímetros (dm)</br>
+                ${medida * 100} centímetros (cm)</br>
+                ${medida * 1000} milímetros (mm)</br>
+            </p>
+            
+            `
+
+        }
+
+    </script>
+
+</body>
+
+</html>
