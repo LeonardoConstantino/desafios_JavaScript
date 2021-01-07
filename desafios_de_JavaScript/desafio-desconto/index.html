@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio desconto</title>
+</head>
+<body>
+    <h1>Calcular desconto</h1>
+    <input type="button" value="Calcular desconto de 10%" onclick="descontar()">
+    <p id="res"> Clique no botão acima para iniciar</p>
+    <script>
+        function descontar(){
+            var produto = window.prompt('Qual é o produto que você esta comprando?')
+            var valorproduto = Number(window.prompt(`Qual é o preço de ${produto}?`))
+            res.innerHTML = `
+                <h2>Calculando o desconto de 10% para ${produto}</h2>
+                <P>O preço original era R$ ${valorproduto}.</P>
+                <P>Você acaba de ganhar R$ ${valorproduto * 0.1} de desconto (-10%)</P>
+                <P>No fim, você vai pagar R$ ${valorproduto - (valorproduto * 0.1)} no produto ${produto}</P>
+                `
+        }
+    </script>
+</body>
+</html>
