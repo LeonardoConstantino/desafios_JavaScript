@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio conversor monetário</title>
+</head>
+<body>
+    <H1>Conversor R$ &rarr; US$</H1>
+    <input type="button" value="converter" onclick="converter()">
+    <p id="res">Clique no botão acima para converter</p>
+    <script>
+        var dolar = Number(window.prompt('Antes de mais nada. quanto esta a cotação do dólar agora'))
+        function converter() {
+            var carteira = Number(window.prompt('Quanto R$ você tem na carteira'))
+            res.innerHTML = `<p>O valor convertido fica: US$${dolar / carteira}.</p>`
+        }
+    </script>
+</body>
+</html>
