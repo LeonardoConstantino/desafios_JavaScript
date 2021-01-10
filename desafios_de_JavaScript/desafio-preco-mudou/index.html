@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço mudou</title>
+</head>
+
+<body>
+    <h1>Preço mudou</h1>
+    <input type="button" value="Verificar" onclick="verificar()">
+    <p id="res">Clique no botão acima para analisar a mudança de preço</p>
+    <script>
+        function verificar() {
+            var produto = window.prompt('Qual produto você quer analisar?')
+            var preço_anterior = Number(window.prompt(`Qual era o preço anterior de ${produto}?`))
+            var preço_atual = Number(window.prompt(`Qual é o preço atual de ${produto}?`))
+            if (preço_anterior < preço_atual) {
+                res.innerHTML = `
+                    <h2>Analisando os valores informados</h2>
+                    <p>O produto ${produto} custava R$ ${preço_anterior} e agora esta custando R$ ${preço_atual}.</p>
+                    <p>Hoje o produto ${produto} esta mais caro.</p>
+                    <p>O preço subiu R$ ${preço_atual - preço_anterior} em relação a o preço anterior.</p>
+                    <p>Uma variação de R$ ${(preço_atual - preço_anterior) * 100 / preço_anterior}% pra cima.</p>
+                    <input type="button" value="limpar" onclick="limpar()">
+                `
+            } else {
+                res.innerHTML = `
+                    <h2>Analisando os valores informados</h2>
+                    <p>O produto ${produto} custava R$ ${preço_anterior} e agora esta custando R$ ${preço_atual}.</p>
+                    <p>Hoje o produto ${produto} esta mais barato.</p>
+                    <p>O preço caiu R$ ${preço_anterior - preço_atual} em relação a o preço anterior.</p>
+                    <p>Uma variação de R$ ${(preço_anterior - preço_atual) * 100 / preço_atual}% pra cima.</p>
+                    <input type="button" value="limpar" onclick="limpar()">
+                `
+            }
+        }
+
+        function limpar() {
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>
