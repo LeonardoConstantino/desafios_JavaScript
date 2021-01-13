@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudando a cor do fundo</title>
+</head>
+<body style="text-align: center; margin: 50px;">
+    <span style="padding: 0px 2%; font-size: 1.9rem; color:white">Mude a cor</span>
+    <input type="range" name="mudarcor" id="mudarcor" value="0" min="0" max="1" onchange="mudarcor()">
+    <label for="mudarcor" style="padding: 0px 2%; font-size: 1.9rem;">Mude a cor</label>
+    <script>
+        function mudarcor(){
+            var mudar = document.getElementById('mudarcor').value
+            if( mudar == 0){
+                document.body.style.backgroundColor = " white";
+            }else{
+                document.body.style.backgroundColor = "black";
+            }
+        }
+    </script>
+</body>
+</html>
